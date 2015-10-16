@@ -1,0 +1,123 @@
+FORMAT: 1A
+HOST: http://private-4358a-quickcoffee.apiary-mock.com
+
+# quick-coffee
+
+API заказа и оплаты кофе, напитков и других продуктов.
+
+# Group  Клиентское API
+
+## Места продажи [/customer/places]
+
+### Список [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id"            : 1,
+                "latitude"      : 55.768444,
+                "longtitude"    : 37.650743,
+                "name"          : "Кфемолка",
+                "description"   : "Кофе, горячий шоколад, сэндвичи",
+                "siteLink"      : "http://cfkl.com"
+            },
+            {
+                "id"            : 2,
+                "latitude"      : 55.768414,
+                "longtitude"    : 37.650713,
+                "name"          : "Теремок",
+                "description"   : "Квас и соки",
+                "siteLink"      : "http://terem.com"
+            }
+        ]
+        
+## Близлежащие места проджи [/customer/places?latitude={latitude}&longtitude={longtitude}&radius={radiud}]
++ Parameters
+    + latitude: `55.7684` (number, required) - широта центра карты
+    + longtitude: `37.6507` (number, required) - долгота центра карты
+    + radius: `2000` (number, required) - радиус охвата в метрах
+    
+### Список [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id"            : 1,
+                "latitude"      : 55.768444,
+                "longtitude"    : 37.650743,
+                "name"          : "Кфемолка",
+                "description"   : "Кофе, горячий шоколад, сэндвичи",
+                "siteLink"      : "http://cfkl.com"
+            }
+        ]
+
+## Меню заведения [/customer/places/{id}/menu]
+
+### Список [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id"    : 1,
+                "name"  : "Американо",
+                "price" : 70.50
+            },
+            {
+                "id"    : 2,
+                "name"  : "Капучино",
+                "price" : 100.50
+            },
+            {
+                "id"    : 3,
+                "name"  : "Сэндвич с курицей",
+                "price" : 200.00
+            }
+        ]
+        
+## Оформить заказ [/customer/places/{id}/order]        
++ Parameters
+    + id: `1` (number, required) - идентификатор заведения
+    
+### Заказ [POST]
+
++ Request (application/json)
+
+
+        {
+            "serveDate" : "2015-08-05T09:40:51.620Z",
+            "order" : [
+                {
+                    "id"    : 2,
+                    "name"  : "Капучино",
+                    "price" : 100.50
+                },
+                {
+                    "id"    : 2,
+                    "name"  : "Капучино",
+                    "price" : 100.50
+                },
+                {
+                    "id"    : 3,
+                    "name"  : "Сэндвич с курицей",
+                    "price" : 200.00
+                }
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /customer/places/{id}/order/1
+
+    + Body
+
+            {
+                "id"        : 1,
+                "orderDate" : "2015-08-05T08:40:51.620Z",
+                "ticket"    : "12FA4",
+                "total"     : 400.10
+            }
