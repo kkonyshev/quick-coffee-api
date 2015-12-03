@@ -17,7 +17,7 @@ API заказа и оплаты кофе, напитков и других пр
             {
                 "id"            : 1,
                 "latitude"      : 55.768444,
-                "longtitude"    : 37.650743,
+                "longitude"     : 37.650743,
                 "supplier"      : {
                     "id"            : 1,
                     "name"          : "Кфемолка",
@@ -28,7 +28,7 @@ API заказа и оплаты кофе, напитков и других пр
             {
                 "id"            : 2,
                 "latitude"      : 55.768414,
-                "longtitude"    : 37.650713,
+                "longitude"     : 37.650713,
                 "customer"      : {
                     "id"            : 2,
                     "name"          : "Теремок",
@@ -38,10 +38,10 @@ API заказа и оплаты кофе, напитков и других пр
             }
         ]
         
-## Близлежащие места проджи [/supplier/places?latitude={latitude}&longtitude={longtitude}&radius={radiud}]
+## Близлежащие места проджи [/supplier/places?latitude={latitude}&longitude={longitude}&radius={radiud}]
 + Parameters
     + latitude: `55.7684` (number, required) - широта центра карты
-    + longtitude: `37.6507` (number, required) - долгота центра карты
+    + longitude: `37.6507` (number, required) - долгота центра карты
     + radius: `2000` (number, required) - радиус охвата в метрах
     
 ### Список [GET]
@@ -52,7 +52,7 @@ API заказа и оплаты кофе, напитков и других пр
             {
                 "id"            : 1,
                 "latitude"      : 55.768444,
-                "longtitude"    : 37.650743,
+                "longitude"    : 37.650743,
                 "supplier"      : {
                     "id"            : 1,
                     "name"          : "Кфемолка",
