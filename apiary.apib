@@ -7,7 +7,7 @@ API заказа и оплаты кофе, напитков и других пр
 
 # Group  Клиентское API
 
-## Места продажи [/customer/places]
+## Места продажи [/supplier/places]
 
 ### Список [GET]
 
@@ -18,7 +18,7 @@ API заказа и оплаты кофе, напитков и других пр
                 "id"            : 1,
                 "latitude"      : 55.768444,
                 "longtitude"    : 37.650743,
-                "customer"      : {
+                "supplier"      : {
                     "id"            : 1,
                     "name"          : "Кфемолка",
                     "description"   : "Кофе, горячий шоколад, сэндвичи",
@@ -38,7 +38,7 @@ API заказа и оплаты кофе, напитков и других пр
             }
         ]
         
-## Близлежащие места проджи [/customer/places?latitude={latitude}&longtitude={longtitude}&radius={radiud}]
+## Близлежащие места проджи [/supplier/places?latitude={latitude}&longtitude={longtitude}&radius={radiud}]
 + Parameters
     + latitude: `55.7684` (number, required) - широта центра карты
     + longtitude: `37.6507` (number, required) - долгота центра карты
@@ -53,7 +53,7 @@ API заказа и оплаты кофе, напитков и других пр
                 "id"            : 1,
                 "latitude"      : 55.768444,
                 "longtitude"    : 37.650743,
-                "customer"      : {
+                "supplier"      : {
                     "id"            : 1,
                     "name"          : "Кфемолка",
                     "description"   : "Кофе, горячий шоколад, сэндвичи",
@@ -62,7 +62,7 @@ API заказа и оплаты кофе, напитков и других пр
             }
         ]
 
-## Меню заведения [/customer/places/{id}/menu]
+## Меню заведения [/supplier/places/{id}/menu]
 
 ### Список [GET]
 
@@ -86,7 +86,7 @@ API заказа и оплаты кофе, напитков и других пр
             }
         ]
         
-## Оформить заказ [/customer/places/{id}/order]        
+## Оформить заказ [/supplier/places/{id}/order]        
 + Parameters
     + id: `1` (number, required) - идентификатор заведения
     
@@ -120,7 +120,7 @@ API заказа и оплаты кофе, напитков и других пр
 
     + Headers
 
-            Location: /customer/places/{id}/order/1
+            Location: /supplier/places/{id}/order/1
 
     + Body
 
