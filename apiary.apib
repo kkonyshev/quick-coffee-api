@@ -13,32 +13,38 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Response 200 (application/json)
 
-        [
-            {
-                "id"            : 1,
-                "latitude"      : 55.768444,
-                "longitude"     : 37.650743,
-                "supplier"      : {
-                    "id"            : 1,
-                    "name"          : "Кфемолка",
-                    "description"   : "Кофе, горячий шоколад, сэндвичи",
-                    "siteLink"      : "http://cfkl.com"
-                }
-            },
-            {
-                "id"            : 2,
-                "latitude"      : 55.768414,
-                "longitude"     : 37.650713,
-                "customer"      : {
-                    "id"            : 2,
-                    "name"          : "Теремок",
-                    "description"   : "Квас и соки",
-                    "siteLink"      : "http://terem.com"
-                }
-            }
-        ]
+[
+  {
+    "placeid": 1,
+    "latitude": 55.76844400,
+    "longitude": 37.65074300,
+    "Supplier": {
+      "supplierid": 1,
+      "name": "Кофе - это средний род",
+      "description": "Кофе, пончики",
+      "sitelink": "http://localhost"
+    }
+  },
+  {
+    "placeid": 2,
+    "latitude": 55.76841400,
+    "longitude": 37.65071300,
+    "Supplier": {
+      "supplierid": 1,
+      "name": "Кофе - это средний род",
+      "description": "Кофе, пончики",
+      "sitelink": "http://localhost"
+    }
+  }
+]
+
++ Response 500 (application/json)
+
+{
+  "Message": "Непредвиденная ошибка"
+}
         
-## Близлежащие места проджи [/supplier/places?latitude={latitude}&longitude={longitude}&radius={radiud}]
+## Близлежащие места проджи [/supplier/places?latitude={latitude}&longitude={longitude}&radius={radius}]
 + Parameters
     + latitude: `55.7684` (number, required) - широта центра карты
     + longitude: `37.6507` (number, required) - долгота центра карты
@@ -48,19 +54,36 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Response 200 (application/json)
 
-        [
-            {
-                "id"            : 1,
-                "latitude"      : 55.768444,
-                "longitude"    : 37.650743,
-                "supplier"      : {
-                    "id"            : 1,
-                    "name"          : "Кфемолка",
-                    "description"   : "Кофе, горячий шоколад, сэндвичи",
-                    "siteLink"      : "http://cfkl.com"
-                }
-            }
-        ]
+[
+  {
+    "placeid": 1,
+    "latitude": 55.76844400,
+    "longitude": 37.65074300,
+    "Supplier": {
+      "supplierid": 1,
+      "name": "Кофе - это средний род",
+      "description": "Кофе, пончики",
+      "sitelink": "http://localhost"
+    }
+  },
+  {
+    "placeid": 2,
+    "latitude": 55.76841400,
+    "longitude": 37.65071300,
+    "Supplier": {
+      "supplierid": 1,
+      "name": "Кофе - это средний род",
+      "description": "Кофе, пончики",
+      "sitelink": "http://localhost"
+    }
+  }
+]
+
++ Response 500 (application/json)
+
+{
+  "Message": "Непредвиденная ошибка"
+}
 
 ## Меню заведения [/supplier/places/{id}/menu]
 
