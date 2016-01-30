@@ -144,8 +144,44 @@ API заказа и оплаты кофе, напитков и других пр
 
 {
   "message": "Неправильный логин или пароль"
-}      
-        
+}   
+
+## Регистрация [/customer/register]        
++ Parameters
+    + id: `1` (number, required) - идентификатор заведения
+    
+### Заказ [POST]
+
++ Request (application/json)
+
+{
+  "customerInfo": {
+    "surname": "Немытый",
+    "name": "Альфонс",
+    "patronymic": "Даздранагонович",
+    "phone": "+75551112233",
+    "email": "test@iddqd.ru"
+  },
+  "basicAuth": {
+    "login": "onotole",
+    "pass": "1"
+  }
+}
+
++ Response 200 (application/json)
+
++ Response 409 (application/json)
+
+{
+  "message": "Такой логин уже используется"
+} 
+            
++ Response 500 (application/json)
+
+{
+  "message": "Непредвиденная ошибка"
+}            
+
 ## Оформить заказ [/supplier/places/{id}/order]        
 + Parameters
     + id: `1` (number, required) - идентификатор заведения
