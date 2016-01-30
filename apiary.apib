@@ -127,7 +127,24 @@ API заказа и оплаты кофе, напитков и других пр
 {
   "message": "Данной точки не существует"
 }
-      
+
+## Проверка авторизации [/customer/auth]
+
+### Список [GET]
+
++ Response 200 (application/json)
+
++ Response 500 (application/json)
+
+{
+  "message": "Непредвиденная ошибка"
+}
+
++ Response 401 (application/json)
+
+{
+  "message": "Неправильный логин или пароль"
+}      
         
 ## Оформить заказ [/supplier/places/{id}/order]        
 + Parameters
