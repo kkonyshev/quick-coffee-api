@@ -13,38 +13,38 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Response 200 (application/json)
 
-[
-  {
-    "placeid": 2,
-    "address": "ул. Богдана Титомира 1",
-    "latitude": 55.76844400,
-    "longitude": 37.65074300,
-    "Supplier": {
-      "supplierid": 1,
-      "name": "Кофе - это средний род",
-      "description": "Кофе, пончики",
-      "sitelink": "http://localhost"
-    }
-  },
-  {
-    "placeid": 3,
-    "address": "ул. Покрышкина 15",
-    "latitude": 55.76841400,
-    "longitude": 37.65071300,
-    "Supplier": {
-      "supplierid": 1,
-      "name": "Кофе - это средний род",
-      "description": "Кофе, пончики",
-      "sitelink": "http://localhost"
-    }
-  }
-]
+        [
+          {
+            "placeid": 2,
+            "address": "ул. Богдана Титомира 1",
+            "latitude": 55.76844400,
+            "longitude": 37.65074300,
+            "Supplier": {
+              "supplierid": 1,
+              "name": "Кофе - это средний род",
+              "description": "Кофе, пончики",
+              "sitelink": "http://localhost"
+            }
+          },
+          {
+            "placeid": 3,
+            "address": "ул. Покрышкина 15",
+            "latitude": 55.76841400,
+            "longitude": 37.65071300,
+            "Supplier": {
+              "supplierid": 1,
+              "name": "Кофе - это средний род",
+              "description": "Кофе, пончики",
+              "sitelink": "http://localhost"
+            }
+          }
+        ]
 
 + Response 500 (application/json)
 
-{
-  "message": "Непредвиденная ошибка"
-}
+        {
+          "message": "Непредвиденная ошибка"
+        }
         
 ## Близлежащие места проджи [/supplier/places?latitude={latitude}&longitude={longitude}&radius={radius}]
 + Parameters
@@ -56,38 +56,38 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Response 200 (application/json)
 
-[
-  {
-    "placeid": 2,
-    "address": "ул. Богдана Титомира 1",
-    "latitude": 55.76844400,
-    "longitude": 37.65074300,
-    "Supplier": {
-      "supplierid": 1,
-      "name": "Кофе - это средний род",
-      "description": "Кофе, пончики",
-      "sitelink": "http://localhost"
-    }
-  },
-  {
-    "placeid": 3,
-    "address": "ул. Покрышкина 15",
-    "latitude": 55.76841400,
-    "longitude": 37.65071300,
-    "Supplier": {
-      "supplierid": 1,
-      "name": "Кофе - это средний род",
-      "description": "Кофе, пончики",
-      "sitelink": "http://localhost"
-    }
-  }
-]
+        [
+          {
+            "placeid": 2,
+            "address": "ул. Богдана Титомира 1",
+            "latitude": 55.76844400,
+            "longitude": 37.65074300,
+            "Supplier": {
+              "supplierid": 1,
+              "name": "Кофе - это средний род",
+              "description": "Кофе, пончики",
+              "sitelink": "http://localhost"
+            }
+          },
+          {
+            "placeid": 3,
+            "address": "ул. Покрышкина 15",
+            "latitude": 55.76841400,
+            "longitude": 37.65071300,
+            "Supplier": {
+              "supplierid": 1,
+              "name": "Кофе - это средний род",
+              "description": "Кофе, пончики",
+              "sitelink": "http://localhost"
+            }
+          }
+        ]
 
 + Response 500 (application/json)
 
-{
-  "message": "Непредвиденная ошибка"
-}
+        {
+          "message": "Непредвиденная ошибка"
+        }
 
 ## Меню заведения [/supplier/places/{id}/menu]
 
@@ -95,38 +95,38 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Response 200 (application/json)
 
-[
-  {
-    "id": 3,
-    "name": "БигМак",
-    "description": "Всё на булочке с кунжутом",
-    "price": 100.0
-  },
-  {
-    "id": 4,
-    "name": "Кофий",
-    "description": "Первосортный растворимый кофеёк",
-    "price": 99.9900
-  },
-  {
-    "id": 5,
-    "name": "Шаурма",
-    "description": "Курица в лаваше",
-    "price": 150.5000
-  }
-]
+        [
+          {
+            "id": 3,
+            "name": "БигМак",
+            "description": "Всё на булочке с кунжутом",
+            "price": 100.0
+          },
+          {
+            "id": 4,
+            "name": "Кофий",
+            "description": "Первосортный растворимый кофеёк",
+            "price": 99.9900
+          },
+          {
+            "id": 5,
+            "name": "Шаурма",
+            "description": "Курица в лаваше",
+            "price": 150.5000
+          }
+        ]
         
 + Response 500 (application/json)
 
-{
-  "message": "Непредвиденная ошибка"
-}
+        {
+          "message": "Непредвиденная ошибка"
+        }
 
 + Response 500 (application/json)
 
-{
-  "message": "Данной точки не существует"
-}
+        {
+          "message": "Данной точки не существует"
+        }
 
 ## Проверка авторизации [/customer/auth]
 
@@ -136,15 +136,15 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Response 500 (application/json)
 
-{
-  "message": "Непредвиденная ошибка"
-}
+        {
+          "message": "Непредвиденная ошибка"
+        }
 
 + Response 401 (application/json)
 
-{
-  "message": "Неправильный логин или пароль"
-}   
+        {
+          "message": "Неправильный логин или пароль"
+        }   
 
 ## Регистрация [/customer/register]        
 
@@ -152,33 +152,33 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Request (application/json)
 
-{
-  "customerInfo": {
-    "surname": "Немытый",
-    "name": "Альфонс",
-    "patronymic": "Даздранагонович",
-    "phone": "+75551112233",
-    "email": "test@iddqd.ru"
-  },
-  "basicAuth": {
-    "login": "onotole",
-    "pass": "1"
-  }
-}
+        {
+          "customerInfo": {
+            "surname": "Немытый",
+            "name": "Альфонс",
+            "patronymic": "Даздранагонович",
+            "phone": "+75551112233",
+            "email": "test@iddqd.ru"
+          },
+          "basicAuth": {
+            "login": "onotole",
+            "pass": "1"
+          }
+        }
 
 + Response 200 (application/json)
 
 + Response 409 (application/json)
 
-{
-  "message": "Такой логин уже используется"
-} 
+        {
+          "message": "Такой логин уже используется"
+        } 
             
 + Response 500 (application/json)
 
-{
-  "message": "Непредвиденная ошибка"
-}            
+        {
+          "message": "Непредвиденная ошибка"
+        }            
 
 ## Оформить заказ [/supplier/places/{id}/order]        
 + Parameters
@@ -228,5 +228,3 @@ API заказа и оплаты кофе, напитков и других пр
 # Group  Админское API
 
 # Group  API Поставщика
-
-
