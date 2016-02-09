@@ -48,8 +48,8 @@ API заказа и оплаты кофе, напитков и других пр
         
 ## Близлежащие места проджи [/supplier/places?latitude={latitude}&longitude={longitude}&radius={radius}]
 + Parameters
-    + latitude: `55.7684` (number, required) - широта центра карты
-    + longitude: `37.6507` (number, required) - долгота центра карты
+    + latitude: `55.76844400` (number, required) - широта центра карты
+    + longitude: `37.65074300` (number, required) - долгота центра карты
     + radius: `2000` (number, required) - радиус охвата в метрах
     
 ### Список [GET]
@@ -90,9 +90,16 @@ API заказа и оплаты кофе, напитков и других пр
         }
 
 ## Меню заведения [/supplier/places/{id}/menu]
-
++ Parameters
+    + id: 2 (number, required) - идентификатор заведения
+    
 ### Список [GET]
-
++ Attributes
+    + id: `2` (number, required) - идентификатор товара
+    + name: `БигМак` (string, required) - наименование
+    + description: `Всё на булочке с кунжутом` (string, required) - подробное описание
+    + price: `2000` (number, required) - цена в копейках
+    
 + Response 200 (application/json)
 
         [
@@ -100,19 +107,19 @@ API заказа и оплаты кофе, напитков и других пр
             "id": 3,
             "name": "БигМак",
             "description": "Всё на булочке с кунжутом",
-            "price": 100.0
+            "price": 10000
           },
           {
             "id": 4,
             "name": "Кофий",
             "description": "Первосортный растворимый кофеёк",
-            "price": 99.9900
+            "price": 9999
           },
           {
             "id": 5,
             "name": "Шаурма",
             "description": "Курица в лаваше",
-            "price": 150.5000
+            "price": 15050
           }
         ]
         
@@ -195,17 +202,17 @@ API заказа и оплаты кофе, напитков и других пр
                 {
                     "id"    : 2,
                     "name"  : "Капучино",
-                    "price" : 100.50
+                    "price" : 10050
                 },
                 {
                     "id"    : 2,
                     "name"  : "Капучино",
-                    "price" : 100.50
+                    "price" : 10050
                 },
                 {
                     "id"    : 3,
                     "name"  : "Сэндвич с курицей",
-                    "price" : 200.00
+                    "price" : 20000
                 }
             ]
         }
@@ -222,7 +229,7 @@ API заказа и оплаты кофе, напитков и других пр
                 "id"        : 1,
                 "orderDate" : "2015-08-05T08:40:51.620Z",
                 "ticket"    : "12FA4",
-                "total"     : 400.10
+                "total"     : 40010
             }
             
 # Group  Админское API
