@@ -13,32 +13,35 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Response 200 (application/json)
 
-        [
-          {
-            "placeid": 2,
-            "address": "ул. Богдана Титомира 1",
-            "latitude": 55.76844400,
-            "longitude": 37.65074300,
-            "Supplier": {
-              "supplierid": 1,
-              "name": "Кофе - это средний род",
-              "description": "Кофе, пончики",
-              "sitelink": "http://localhost"
-            }
-          },
-          {
-            "placeid": 3,
-            "address": "ул. Покрышкина 15",
-            "latitude": 55.76841400,
-            "longitude": 37.65071300,
-            "Supplier": {
-              "supplierid": 1,
-              "name": "Кофе - это средний род",
-              "description": "Кофе, пончики",
-              "sitelink": "http://localhost"
-            }
-          }
-        ]
+{
+  "data": [
+    {
+      "placeid": 4,
+      "address": "ул. Богдана Титомира 12",
+      "latitude": 55.76844400,
+      "longitude": 37.65074300,
+      "supplier": {
+        "supplierid": 2,
+        "name": "Кафе Куриные потроха Ext",
+        "description": "Отборные куриные головы и лапки",
+        "sitelink": "http://kokoko.ru"
+      }
+    },
+    {
+      "placeid": 5,
+      "address": "ул. Богдана Титомира 11",
+      "latitude": 55.76844400,
+      "longitude": 37.65074300,
+      "supplier": {
+        "supplierid": 2,
+        "name": "Кафе Куриные потроха Ext",
+        "description": "Отборные куриные головы и лапки",
+        "sitelink": "http://kokoko.ru"
+      }
+    }
+    }
+  ]
+}
 
 + Response 500 (application/json)
 
@@ -56,32 +59,35 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Response 200 (application/json)
 
-        [
-          {
-            "placeid": 2,
-            "address": "ул. Богдана Титомира 1",
-            "latitude": 55.76844400,
-            "longitude": 37.65074300,
-            "Supplier": {
-              "supplierid": 1,
-              "name": "Кофе - это средний род",
-              "description": "Кофе, пончики",
-              "sitelink": "http://localhost"
-            }
-          },
-          {
-            "placeid": 3,
-            "address": "ул. Покрышкина 15",
-            "latitude": 55.76841400,
-            "longitude": 37.65071300,
-            "Supplier": {
-              "supplierid": 1,
-              "name": "Кофе - это средний род",
-              "description": "Кофе, пончики",
-              "sitelink": "http://localhost"
-            }
-          }
-        ]
+{
+  "data": [
+    {
+      "placeid": 4,
+      "address": "ул. Богдана Титомира 12",
+      "latitude": 55.76844400,
+      "longitude": 37.65074300,
+      "supplier": {
+        "supplierid": 2,
+        "name": "Кафе Куриные потроха Ext",
+        "description": "Отборные куриные головы и лапки",
+        "sitelink": "http://kokoko.ru"
+      }
+    },
+    {
+      "placeid": 5,
+      "address": "ул. Богдана Титомира 11",
+      "latitude": 55.76844400,
+      "longitude": 37.65074300,
+      "supplier": {
+        "supplierid": 2,
+        "name": "Кафе Куриные потроха Ext",
+        "description": "Отборные куриные головы и лапки",
+        "sitelink": "http://kokoko.ru"
+      }
+    }
+    }
+  ]
+}
 
 + Response 500 (application/json)
 
@@ -102,34 +108,36 @@ API заказа и оплаты кофе, напитков и других пр
     
 + Response 200 (application/json)
 
-        [
-          {
-            "id": 3,
-            "name": "БигМак",
-            "description": "Всё на булочке с кунжутом",
-            "price": 10000
-          },
-          {
-            "id": 4,
-            "name": "Кофий",
-            "description": "Первосортный растворимый кофеёк",
-            "price": 9999
-          },
-          {
-            "id": 5,
-            "name": "Шаурма",
-            "description": "Курица в лаваше",
-            "price": 15050
-          }
-        ]
-        
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "БигМак",
+      "description": "Всё на булочке с кунжутом",
+      "price": 100.0
+    },
+    {
+      "id": 2,
+      "name": "Кофий",
+      "description": "Первосортный растворимый кофеёк",
+      "price": 99.9900
+    },
+    {
+      "id": 3,
+      "name": "Шаурма",
+      "description": "Курица в лаваше",
+      "price": 150.5000
+    }
+  ]
+}
+
 + Response 500 (application/json)
 
         {
           "message": "Непредвиденная ошибка"
         }
 
-+ Response 500 (application/json)
++ Response 404 (application/json)
 
         {
           "message": "Данной точки не существует"
