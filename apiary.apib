@@ -155,12 +155,6 @@ API заказа и оплаты кофе, напитков и других пр
           "message": "Непредвиденная ошибка"
         }
 
-+ Response 401 (application/json)
-
-        {
-          "message": "Неправильный логин или пароль"
-        }   
-
 ## Регистрация [/customer/register]        
 
 ### Заказ [POST]
@@ -185,20 +179,15 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Response 409 (application/json)
 
-        {
-          "message": "Такой логин уже используется"
-        } 
-            
-+ Response 500 (application/json)
+{
+"message": "Такой логин уже используется"
+} 
 
-        {
-          "message": "Непредвиденная ошибка"
-        }            
 
 ## Оформить заказ [/supplier/places/{id}/order]        
 + Parameters
     + id: `1` (number, required) - идентификатор заведения
-    
+
 ### Заказ [POST]
 
 + Request (application/json)
@@ -238,7 +227,7 @@ API заказа и оплаты кофе, напитков и других пр
 ## Оплата заказа (криптограмма) [/supplier/order/{id}]        
 + Parameters
     + id: `1` (number, required) - идентификатор заказа  
-  
+
 ### Оплата [POST]
 
 + Request (application/json)
