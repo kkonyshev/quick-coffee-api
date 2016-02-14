@@ -203,27 +203,19 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Request (application/json)
 
-
-        {
-            "serveDate" : "2015-08-05T09:40:51.620Z",
-            "order" : [
-                {
-                    "id"    : 2,
-                    "name"  : "Капучино",
-                    "price" : 10050
-                },
-                {
-                    "id"    : 2,
-                    "name"  : "Капучино",
-                    "price" : 10050
-                },
-                {
-                    "id"    : 3,
-                    "name"  : "Сэндвич с курицей",
-                    "price" : 20000
-                }
-            ]
-        }
+{
+  "dateServe": "2016-02-15T01:20:59.1395229+06:00",
+  "items": [
+    {
+      "id": 1,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "quantity": 2
+    }
+  ]
+}
 
 + Response 201 (application/json)
 
@@ -233,13 +225,36 @@ API заказа и оплаты кофе, напитков и других пр
 
     + Body
 
-            {
-                "id"        : 1,
-                "orderDate" : "2015-08-05T08:40:51.620Z",
-                "ticket"    : "12FA4",
-                "total"     : 40010
-            }
-            
+{
+  "data": {
+    "orderId": 10,
+    "total": 300,
+    "auth": {
+      "login": "10",
+      "pass": "0371bb99"
+    }
+  }
+  
+### Оплата заказа (криптограмма) [POST]
+
++ Request (application/json)
+
+{
+  "recurring": false,
+  "saveCard": false,
+  "cryptogram": "024242424242161204KQcvRR4nXXKAH+OvXuxwyDjjeep6Tb05d+8LtUs8nQIKdhZrh5f25jhNgpG0eu0sa0XqQ6NING\\/B597UBD2xTlvxjEGe4oFdId9d5H0NsquoMs1rHquz7FoRSO6Mzwffvmo\\/HVRWAmZfJj9CpMS98vnwdAAMv02nk+ytUnVf\\/zJ0MBmcGiotmgddwhJBSC8avBdBtQU+cd8ecEoCjWs\\/ycYI2rwm5Zw1UZajutH6BemF0ALpdLD97jIOuGL1XLcyQva5dCwuki1eMGkXbs6I0fCt2lL\\/PlXvkN2TepmAGGhDmP2n7HMP8CEG4WN4kfShNNslj\\/L\\/EZZe4je9JwDy6g==",
+  "IpAddress": "127.0.0.1",
+  "cardOwnerName": "sdfsfds"
+}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /supplier/places/{id}/order/1
+
+    + Body
+ 
 # Group  Админское API
 
 # Group  API Поставщика
