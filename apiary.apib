@@ -11,37 +11,45 @@ API заказа и оплаты кофе, напитков и других пр
 
 ### Список [GET]
 
++ Request 
+
+    + Headers
+        
+            Authorization: Basic ZGVmYXVsdDp7QTY3QjkyRjQtMUJDRi00OThDLTgwMTctMTA4NTg0MkIzNjUwfQ==
+
+
 + Response 200 (application/json)
 
-{
-  "data": [
-    {
-      "placeid": 4,
-      "address": "ул. Богдана Титомира 12",
-      "latitude": 55.76844400,
-      "longitude": 37.65074300,
-      "supplier": {
-        "supplierid": 2,
-        "name": "Кафе Куриные потроха Ext",
-        "description": "Отборные куриные головы и лапки",
-        "sitelink": "http://kokoko.ru"
-      }
-    },
-    {
-      "placeid": 5,
-      "address": "ул. Богдана Титомира 11",
-      "latitude": 55.76844400,
-      "longitude": 37.65074300,
-      "supplier": {
-        "supplierid": 2,
-        "name": "Кафе Куриные потроха Ext",
-        "description": "Отборные куриные головы и лапки",
-        "sitelink": "http://kokoko.ru"
-      }
-    }
-    }
-  ]
-}
+        {
+          "data": [
+            {
+              "placeid": 4,
+              "address": "ул. Богдана Титомира 12",
+              "latitude": 55.76844400,
+              "longitude": 37.65074300,
+              "supplier": {
+                "supplierid": 2,
+                "name": "Кафе Куриные потроха Ext",
+                "description": "Отборные куриные головы и лапки",
+                "sitelink": "http://kokoko.ru"
+              }
+            },
+            {
+              "placeid": 5,
+              "address": "ул. Богдана Титомира 11",
+              "latitude": 55.76844400,
+              "longitude": 37.65074300,
+              "supplier": {
+                "supplierid": 2,
+                "name": "Кафе Куриные потроха Ext",
+                "description": "Отборные куриные головы и лапки",
+                "sitelink": "http://kokoko.ru"
+              }
+            }
+            }
+          ]
+        }
+
 
 + Response 500 (application/json)
 
@@ -55,39 +63,46 @@ API заказа и оплаты кофе, напитков и других пр
     + longitude: `37.65074300` (number, required) - долгота центра карты
     + radius: `2000` (number, required) - радиус охвата в метрах
     
+
 ### Список [GET]
 
++ Request 
+
+    + Headers
+        
+            Authorization: Basic ZGVmYXVsdDp7QTY3QjkyRjQtMUJDRi00OThDLTgwMTctMTA4NTg0MkIzNjUwfQ==
+            
 + Response 200 (application/json)
 
-{
-  "data": [
-    {
-      "placeid": 4,
-      "address": "ул. Богдана Титомира 12",
-      "latitude": 55.76844400,
-      "longitude": 37.65074300,
-      "supplier": {
-        "supplierid": 2,
-        "name": "Кафе Куриные потроха Ext",
-        "description": "Отборные куриные головы и лапки",
-        "sitelink": "http://kokoko.ru"
-      }
-    },
-    {
-      "placeid": 5,
-      "address": "ул. Богдана Титомира 11",
-      "latitude": 55.76844400,
-      "longitude": 37.65074300,
-      "supplier": {
-        "supplierid": 2,
-        "name": "Кафе Куриные потроха Ext",
-        "description": "Отборные куриные головы и лапки",
-        "sitelink": "http://kokoko.ru"
-      }
-    }
-    }
-  ]
-}
+        {
+          "data": [
+            {
+              "placeid": 4,
+              "address": "ул. Богдана Титомира 12",
+              "latitude": 55.76844400,
+              "longitude": 37.65074300,
+              "supplier": {
+                "supplierid": 2,
+                "name": "Кафе Куриные потроха Ext",
+                "description": "Отборные куриные головы и лапки",
+                "sitelink": "http://kokoko.ru"
+              }
+            },
+            {
+              "placeid": 5,
+              "address": "ул. Богдана Титомира 11",
+              "latitude": 55.76844400,
+              "longitude": 37.65074300,
+              "supplier": {
+                "supplierid": 2,
+                "name": "Кафе Куриные потроха Ext",
+                "description": "Отборные куриные головы и лапки",
+                "sitelink": "http://kokoko.ru"
+              }
+            }
+            }
+          ]
+        }
 
 + Response 500 (application/json)
 
@@ -98,38 +113,45 @@ API заказа и оплаты кофе, напитков и других пр
 ## Меню заведения [/supplier/places/{id}/menu]
 + Parameters
     + id: 2 (number, required) - идентификатор заведения
-    
+
 ### Список [GET]
+
 + Attributes
     + id: `2` (number, required) - идентификатор товара
     + name: `БигМак` (string, required) - наименование
     + description: `Всё на булочке с кунжутом` (string, required) - подробное описание
     + price: `2000` (number, required) - цена в копейках
+
++ Request 
+
+    + Headers
+        
+            Authorization: Basic ZGVmYXVsdDp7QTY3QjkyRjQtMUJDRi00OThDLTgwMTctMTA4NTg0MkIzNjUwfQ==
     
 + Response 200 (application/json)
 
-{
-  "data": [
-    {
-      "id": 1,
-      "name": "БигМак",
-      "description": "Всё на булочке с кунжутом",
-      "price": 100.0
-    },
-    {
-      "id": 2,
-      "name": "Кофий",
-      "description": "Первосортный растворимый кофеёк",
-      "price": 99.9900
-    },
-    {
-      "id": 3,
-      "name": "Шаурма",
-      "description": "Курица в лаваше",
-      "price": 150.5000
-    }
-  ]
-}
+        {
+          "data": [
+            {
+              "id": 1,
+              "name": "БигМак",
+              "description": "Всё на булочке с кунжутом",
+              "price": 100.0
+            },
+            {
+              "id": 2,
+              "name": "Кофий",
+              "description": "Первосортный растворимый кофеёк",
+              "price": 99.9900
+            },
+            {
+              "id": 3,
+              "name": "Шаурма",
+              "description": "Курица в лаваше",
+              "price": 150.5000
+            }
+          ]
+        }
 
 + Response 500 (application/json)
 
@@ -179,9 +201,9 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Response 409 (application/json)
 
-{
-"message": "Такой логин уже используется"
-} 
+        {
+        "message": "Такой логин уже используется"
+        } 
 
 
 ## Оформить заказ [/supplier/places/{id}/order]        
@@ -192,19 +214,19 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Request (application/json)
 
-{
-  "dateServe": "2016-02-15T01:20:59.1395229+06:00",
-  "items": [
-    {
-      "id": 1,
-      "quantity": 1
-    },
-    {
-      "id": 2,
-      "quantity": 2
-    }
-  ]
-}
+        {
+          "dateServe": "2016-02-15T01:20:59.1395229+06:00",
+          "items": [
+            {
+              "id": 1,
+              "quantity": 1
+            },
+            {
+              "id": 2,
+              "quantity": 2
+            }
+          ]
+        }
 
 + Response 201 (application/json)
 
@@ -212,18 +234,20 @@ API заказа и оплаты кофе, напитков и других пр
 
             Location: /supplier/places/{id}/order/1
 
+
     + Body
 
-{
-  "data": {
-    "orderId": 10,
-    "total": 300,
-    "auth": {
-      "login": "10",
-      "pass": "0371bb99"
-    }
-  }
-  
+            {
+              "data": {
+                "orderId": 10,
+                "total": 300,
+                "auth": {
+                  "login": "10",
+                  "pass": "0371bb99"
+                }
+            }
+
+
 ## Оплата заказа (криптограмма) [/supplier/order/{id}]        
 + Parameters
     + id: `1` (number, required) - идентификатор заказа  
@@ -232,13 +256,13 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Request (application/json)
 
-{
-  "recurring": false,
-  "saveCard": false,
-  "cryptogram": "024242424242161204KQcvRR4nXXKAH+OvXuxwyDjjeep6Tb05d+8LtUs8nQIKdhZrh5f25jhNgpG0eu0sa0XqQ6NING\\/B597UBD2xTlvxjEGe4oFdId9d5H0NsquoMs1rHquz7FoRSO6Mzwffvmo\\/HVRWAmZfJj9CpMS98vnwdAAMv02nk+ytUnVf\\/zJ0MBmcGiotmgddwhJBSC8avBdBtQU+cd8ecEoCjWs\\/ycYI2rwm5Zw1UZajutH6BemF0ALpdLD97jIOuGL1XLcyQva5dCwuki1eMGkXbs6I0fCt2lL\\/PlXvkN2TepmAGGhDmP2n7HMP8CEG4WN4kfShNNslj\\/L\\/EZZe4je9JwDy6g==",
-  "IpAddress": "127.0.0.1",
-  "cardOwnerName": "sdfsfds"
-}
+            {
+              "recurring": false,
+              "saveCard": false,
+              "cryptogram": "024242424242161204KQcvRR4nXXKAH+OvXuxwyDjjeep6Tb05d+8LtUs8nQIKdhZrh5f25jhNgpG0eu0sa0XqQ6NING\\/B597UBD2xTlvxjEGe4oFdId9d5H0NsquoMs1rHquz7FoRSO6Mzwffvmo\\/HVRWAmZfJj9CpMS98vnwdAAMv02nk+ytUnVf\\/zJ0MBmcGiotmgddwhJBSC8avBdBtQU+cd8ecEoCjWs\\/ycYI2rwm5Zw1UZajutH6BemF0ALpdLD97jIOuGL1XLcyQva5dCwuki1eMGkXbs6I0fCt2lL\\/PlXvkN2TepmAGGhDmP2n7HMP8CEG4WN4kfShNNslj\\/L\\/EZZe4je9JwDy6g==",
+              "IpAddress": "127.0.0.1",
+              "cardOwnerName": "sdfsfds"
+            }
 
 + Response 201 (application/json)
 
