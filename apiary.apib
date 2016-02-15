@@ -109,12 +109,12 @@ API заказа и оплаты кофе, напитков и других пр
 
 ## Меню заведения [/supplier/places/{id}/menu]
 + Parameters
-    + id: 2 (number, required) - идентификатор заведения
+    + id: 6 (number, required) - идентификатор заведения
 
 ### Список [GET]
 
 + Attributes
-    + id: `2` (number, required) - идентификатор товара
+    + id: `3` (number, required) - идентификатор товара
     + name: `БигМак` (string, required) - наименование
     + description: `Всё на булочке с кунжутом` (string, required) - подробное описание
     + price: `2000` (number, required) - цена в копейках
@@ -127,28 +127,28 @@ API заказа и оплаты кофе, напитков и других пр
     
 + Response 200 (application/json; charset=utf-8)
 
-        {
-          "data": [
             {
-              "id": 1,
-              "name": "БигМак",
-              "description": "Всё на булочке с кунжутом",
-              "price": 100.0
-            },
-            {
-              "id": 2,
-              "name": "Кофий",
-              "description": "Первосортный растворимый кофеёк",
-              "price": 99.9900
-            },
-            {
-              "id": 3,
-              "name": "Шаурма",
-              "description": "Курица в лаваше",
-              "price": 150.5000
+              "data": [
+                {
+                  "id": 1,
+                  "name": "БигМак",
+                  "description": "Всё на булочке с кунжутом",
+                  "price": 100
+                },
+                {
+                  "id": 2,
+                  "name": "Кофий",
+                  "description": "Первосортный растворимый кофеёк",
+                  "price": 100
+                },
+                {
+                  "id": 3,
+                  "name": "Шаурма",
+                  "description": "Курица в лаваше",
+                  "price": 151
+                }
+              ]
             }
-          ]
-        }
 
 + Response 500 (application/json; charset=utf-8)
 
