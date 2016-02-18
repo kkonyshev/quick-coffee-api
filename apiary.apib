@@ -7,7 +7,7 @@ API заказа и оплаты кофе, напитков и других пр
 
 # Group  Клиентское API
 
-## Места продажи [/supplier/places]
+## Места продажи [/supplier/place]
 
 ### Список [GET]
 
@@ -55,7 +55,7 @@ API заказа и оплаты кофе, напитков и других пр
           "message": "Непредвиденная ошибка"
         }
         
-## Близлежащие места проджи [/supplier/places?latitude={latitude}&longitude={longitude}&radius={radius}]
+## Близлежащие места проджи [/supplier/place?latitude={latitude}&longitude={longitude}&radius={radius}]
 + Parameters
     + latitude: `55.76844400` (number, required) - широта центра карты
     + longitude: `37.65074300` (number, required) - долгота центра карты
@@ -107,7 +107,7 @@ API заказа и оплаты кофе, напитков и других пр
           "message": "Непредвиденная ошибка"
         }
 
-## Меню заведения [/supplier/places/{id}/menu]
+## Меню заведения [/supplier/place/{id}/menu]
 + Parameters
     + id: 6 (number, required) - идентификатор заведения
 
@@ -203,7 +203,7 @@ API заказа и оплаты кофе, напитков и других пр
         } 
 
 
-## Оформить заказ [/supplier/places/{id}/order]
+## Оформить заказ [/supplier/place/{id}/order]
 
 + Parameters
     + id: `1` (number, required) - идентификатор заведения
