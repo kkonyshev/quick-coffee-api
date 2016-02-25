@@ -1,13 +1,11 @@
 FORMAT: 1A
-HOST: http://private-4358a-quickcoffee.apiary-mock.com
+HOST: http://quick-cofee-dev.odin.pa.infobox.ru/
 
-# quick-coffee
+# QUICK-COFFEE: API пользователя
 
 API заказа и оплаты кофе, напитков и других продуктов.
 
-# Group  Клиентское API
-
-## Места продажи [/supplier/place]
+## Места продажи [/supplierapi/supplier/place]
 
 ### Список [GET]
 
@@ -55,7 +53,7 @@ API заказа и оплаты кофе, напитков и других пр
           "message": "Непредвиденная ошибка"
         }
         
-## Близлежащие места проджи [/supplier/place?latitude={latitude}&longitude={longitude}&radius={radius}]
+## Близлежащие места проджи [/supplierapi/supplier/place?latitude={latitude}&longitude={longitude}&radius={radius}]
 + Parameters
     + latitude: `55.76844400` (number, required) - широта центра карты
     + longitude: `37.65074300` (number, required) - долгота центра карты
@@ -107,7 +105,7 @@ API заказа и оплаты кофе, напитков и других пр
           "message": "Непредвиденная ошибка"
         }
 
-## Меню заведения [/supplier/place/{id}/menu]
+## Меню заведения [/supplierapi/supplier/place/{id}/menu]
 + Parameters
     + id: 6 (number, required) - идентификатор заведения
 
@@ -162,7 +160,7 @@ API заказа и оплаты кофе, напитков и других пр
           "message": "Данной точки не существует"
         }
 
-## Проверка авторизации [/customer/auth]
+## ???Проверка авторизации??? [/supplierapi/supplierapi/customer/auth]
 
 ### Список [GET]
 
@@ -174,7 +172,8 @@ API заказа и оплаты кофе, напитков и других пр
           "message": "Непредвиденная ошибка"
         }
 
-## Регистрация [/customer/register]        
+
+## ???Регистрация??? [/supplierapi/customer/register]        
 
 ### Заказ [POST]
 
@@ -203,7 +202,7 @@ API заказа и оплаты кофе, напитков и других пр
         } 
 
 
-## Оформить заказ [/supplier/place/{id}/order]
+## Оформить заказ [/supplierapi/supplier/place/{id}/order]
 
 + Parameters
     + id: `1` (number, required) - идентификатор заведения
@@ -231,7 +230,7 @@ API заказа и оплаты кофе, напитков и других пр
 
     + Headers
 
-            Location: /supplier/places/{id}/order/1
+            Location: /supplierapi/supplier/places/{id}/order/1
 
 
     + Body
@@ -247,7 +246,8 @@ API заказа и оплаты кофе, напитков и других пр
             }
 
 
-## Оплата заказа по криптопрограмме [/supplier/order/{id}]        
+## Оплата заказа по криптопрограмме [/supplierapi/supplier/order/{id}]        
+
 + Parameters
     + id: `1` (number, required) - идентификатор заказа  
 
