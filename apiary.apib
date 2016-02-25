@@ -264,35 +264,3 @@ API заказа и оплаты кофе, напитков и других пр
             }
 
 + Response 201 (application/json; charset=utf-8)
-
-# Group  Админское API
-
-## Места продажи [/supplier]
-
-### добавить поставщика [POST]
-
-+ Request 
-
-    + Headers
-        
-            Authorization: Basic YWRtaW46MQ==
-
-
-    + Body
-    
-            {
-              "name": "Авто Кафе",
-              "description": "Отборные куриные головы и лапки",
-              "sitelink": "http://kokoko1.ru"
-            }
-
-+ Response 201 (application/json; charset=utf-8)
-
-            {
-              "data": {
-                "supplierid": 3
-              }
-            }
-
-
-# Group  API Поставщика
