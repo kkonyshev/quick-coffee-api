@@ -5,6 +5,57 @@ HOST: http://quick-cofee-dev.odin.pa.infobox.ru/
 
 API заказа и оплаты кофе, напитков и других продуктов.
 
+## История заказов пользователя [/api/customer/order]
+
+### Получить [GET]
+
++ Request
+
+    + Headers
+
+            Authorization: Basic MTM6MmI5NTQwZTM=
+
+
+
++ Response 200 (application/json; charset=utf-8)
+
+    + Headers
+
+            ProcessTime: 52
+            Cache-Control: private
+
+    + Body
+
+            {
+              "data": [
+                {
+                  "orderId": 32,
+                  "dateinsert": "2016-02-27T07:13:21.476163",
+                  "dateserve": "2016-02-27T11:20:59.139522",
+                  "datedelay": null,
+                  "statusId": 1,
+                  "name": "Создан",
+                  "total": 120110,
+                  "items": [
+                    {
+                      "itemId": 1,
+                      "name": "БигМак",
+                      "quantity": 2,
+                      "cost": 10000
+                    },
+                    {
+                      "itemId": 2,
+                      "name": "БигМак маленький++",
+                      "quantity": 10,
+                      "cost": 10011
+                    }
+                  ]
+                }
+                ]
+            }
+        
+        
+
 ## Места продажи [/api/supplier/place]
 
 ### Список [GET]
@@ -212,19 +263,25 @@ API заказа и оплаты кофе, напитков и других пр
 
 + Request (application/json; charset=utf-8)
 
-        {
-          "dateServe": "2016-02-15T01:20:59.1395229+06:00",
-          "items": [
+    + Headers
+
+            Authorization: Basic MTM6MmI5NTQwZTM=
+
+    + Body
+
             {
-              "id": 1,
-              "quantity": 1
-            },
-            {
-              "id": 2,
-              "quantity": 2
+              "dateServe": "2016-02-28T01:20:59.1395229+06:00",
+              "items": [
+                {
+                  "id": 1,
+                  "quantity": 1
+                },
+                {
+                  "id": 2,
+                  "quantity": 1
+                }
+              ]
             }
-          ]
-        }
 
 + Response 201 (application/json; charset=utf-8)
 
@@ -246,7 +303,7 @@ API заказа и оплаты кофе, напитков и других пр
             }
 
 
-## Оплата заказа по криптопрограмме [/api/supplier/order/{id}]        
+## Оплата заказа [/api/supplier/order/{id}]        
 
 + Parameters
     + id: `1` (number, required) - идентификатор заказа  
